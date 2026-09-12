@@ -1,0 +1,77 @@
+generated: '2026-09-12'
+method: probed
+source: >-
+  Live unauthenticated GET of the named /.well-known/ path list against every host Aether
+  Biomachines operates that answers HTTPS — the apex and www of aetherbio.com. There is no API
+  baseURL, no OpenAPI servers[] host and no public docs/console host to probe: api., developer.,
+  developers., app., platform., portal., mcp., status. and trust..aetherbio.com do not resolve in
+  DNS at all, and docs.aetherbio.com resolves to ghs.googlehosted.com but fails the TLS handshake
+  on 443 and 302-redirects on port 80 to https://drive.google.com/a/aetherbio.com, i.e. it is an
+  internal Google Drive alias rather than a developer documentation host. Every probed path
+  returned 404. Recorded as an absence: NO WellKnown and NO SecurityTxt pointer is wired in
+  apis.yml, because nothing here is served.
+note: >-
+  The site is a Webflow-published marketing site. /.well-known/* paths return a short 88-byte
+  Webflow "Invalid path" HTML body with HTTP 404, distinct from the site's own 52,431-byte 404
+  page returned for ordinary unknown paths. A control path (/zz-api-evangelist-control-9f3a)
+  returned the identical 52,431-byte 404, confirming these are real hard 404s and not a soft-404
+  catch-all. No 200 was observed on any probed discovery document on any host.
+hosts:
+- host: aetherbio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: www.aetherbio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
