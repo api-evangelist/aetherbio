@@ -31,7 +31,7 @@ tags:
 - Advanced Manufacturing
 - Additive Manufacturing
 - Critical Minerals
-- Machine-Learning
+- Machine Learning
 - Aerospace and Defense
 tags_raw:
 - Company
@@ -44,6 +44,7 @@ tags_raw:
 - Critical Minerals
 - Machine Learning
 - Aerospace and Defense
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
